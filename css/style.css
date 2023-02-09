@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.time-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background-image: url(../images/afternoon.jpg);
+}
+#time {
+    font-size: 7rem;
+}
+@media (max-width: 500px) {
+    #time {
+        font-size: 4.5rem;
+        display: contents;
+        line-height: 4.6rem;
+    }
+}
+@media (min-width: 501px) and (max-width: 767px) {
+    #time {
+        font-size: 5.5rem;
+    }
+}
+
+.time-area div {
+    margin-bottom: 4rem;
+    font-size: 2rem;
+}
+@media (max-width: 500px) {
+    .time-area div {
+        margin-bottom: 2rem;
+    }
+}
+h2 {
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+#time,
+h2 {
+    -webkit-animation-duration: 1.5s;
+    -moz-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -moz-animation-direction: alternate;
+    animation-name: upToDown;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#time:hover,
+h2:hover {
+    animation-play-state: paused;
+}
+@keyframes upToDown {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-30px);
+    }
+} 
